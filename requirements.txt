@@ -1,5 +1,4 @@
 langchain_community
-langchain-openai
 langchain
 openai
 chainlit
@@ -7,3 +6,5 @@ chromadb
 pypdf
 python-dotenv
 chromadb
+huggingface_hub
+sentence_transformers

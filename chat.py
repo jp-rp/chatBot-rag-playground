@@ -1,7 +1,8 @@
 import os
 
 from langchain.prompts import PromptTemplate
-from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langchain_openai import ChatOpenAI
+from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain.chains import RetrievalQA
 import chainlit as cl
@@ -31,7 +32,9 @@ def retrieval_qa_chain(llm, prompt, vector_db):
 
 
 def bot():
-  embeddings = OpenAIEmbeddings(open_ai_key=API_KEY)
+  embeddings = HuggingFaceEmbeddings(
+    model_name="sentence-transformers/all-MiniLM-L6-v2",
+    model_kwargs={'device': 'cpu'})
   vector_db = Chroma(persist_directory=VECTOR_STORE_PATH,
                      embedding_function=embeddings)
   llm = ChatOpenAI(openai_api_key=API_KEY)

@@ -2,9 +2,9 @@ import os
 
 from langchain_community.document_loaders import PyPDFLoader, PyPDFDirectoryLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import Chroma
 from dotenv import load_dotenv
+from langchain_community.embeddings import HuggingFaceEmbeddings
 
 load_dotenv()
 API_KEY = os.getenv('OPENAI_API_KEY')
@@ -25,7 +25,9 @@ def split_docs(docs):
 
 
 def load_vector_db(texts):
-    embeddings = OpenAIEmbeddings(openai_api_key=API_KEY)
+    embeddings = HuggingFaceEmbeddings(
+        model_name="sentence-transformers/all-MiniLM-L6-v2",
+        model_kwargs={'device': 'cpu'})
 
     vector_db = Chroma.from_documents(documents=texts,
                                       embedding=embeddings,
