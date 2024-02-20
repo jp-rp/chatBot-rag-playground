@@ -24,7 +24,7 @@ def retrieval_qa_chain(llm, prompt, vector_db):
   qa_chain = RetrievalQA.from_chain_type(
     llm=llm,
     chain_type='stuff',
-    retriever=vector_db.as_retriever(search_kwargs={'k': 3}),
+    retriever=vector_db.as_retriever(search_kwargs={'k': 3}), #play with fetch_k
     return_source_documents=True,
     chain_type_kwargs={'prompt': prompt}
   )

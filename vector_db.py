@@ -33,7 +33,6 @@ def load_vector_db(texts):
                                       embedding=embeddings,
                                       persist_directory=DB_PATH)
     vector_db.persist()
-    vector_db = None
 
 
 if __name__ == '__main__':
