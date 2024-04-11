@@ -3,7 +3,7 @@
 #### 1. Abrir la Terminal o Línea de Comandos
 Dependiendo de tu sistema operativo, abre la terminal (Linux o macOS) o la línea de comandos/PowerShell (Windows).
 
-#### 2. Navegar al Directorio Deseado
+#### 2. Navegar al Directorio
 Usa el comando cd para navegar al directorio donde deseas clonar el repositorio. Por ejemplo:
 ```console
 cd path/to/directory
@@ -21,7 +21,7 @@ git clone https://github.com/jp-rp/chatBot-rag-playground.git
 git clone git@github.com:jp-rp/chatBot-rag-playground.git
 ```
 
-## Seleccionar branch
+## Seleccionar versión
 
 Este repositorio implementa un chatbot con differentes especificaciones. De momento, las versiones están funcionales son:
 ###### chatBot_gpt3.5t_hfst-MiniLM-L6-v2_t
