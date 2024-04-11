@@ -49,7 +49,7 @@ sustituyendo '<branch-name>' por el nombre de la implementación deseada. e.g.
 git checkout chatBot_gpt3.5t_hfst-MiniLM-L6-v2_t
 ```
 
-## Instalar librerias
+## Instalar librerías
 Una vez clonado el repositorio y seleccionada una implementación. El siguiente paso es instalar las librerías necesarias para el proyecto.
 ###### Recomiendo utilizar diferentes evnironments para cada branch. Así podemos evitar incompatibilidad entre paquetes (si llegasen a surgir) y podemos manetener environments limpios entre proyectos. Para más información sobre como crear, activar y eliminar environments revisa la documentación de [Conda]() o [Pyenv](https://github.com/pyenv/pyenv).
 
