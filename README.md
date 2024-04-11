@@ -71,7 +71,7 @@ touch .env
 ```
 y abre el archivo en cualquier text editor y añade la siguiente línea:
 ```python
-OPENAI_API_KEY ='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'
+OPENAI_API_KEY ='{tu API key}'
 ```
 
 ## 4. Vectorización
